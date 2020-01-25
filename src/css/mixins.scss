@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin btn-standard {
+  font-family: Roboto-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: $text-dark;
+  border-radius: 22px;
+  outline: none;
+  background-color: $btn-bg;
+  cursor: pointer;
+  background-clip: padding-box;
+}
+

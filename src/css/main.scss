@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 * {
   margin: 0;
@@ -27,8 +28,9 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20%;
-  background-image: linear-gradient(to right, #fd712c, #f21780);
+  padding: 26px $width-desktop;
+  background: $gradient-bg;
+  margin-bottom: -1px;
   &__logo {
     text-decoration: none;
     display: flex;
@@ -38,7 +40,7 @@ body {
   &__logo-name {
     font-family: Dosis-Bold, sans-serif;
     font-size: 36px;
-    color: #ffffff;
+    color: $text-light;
     margin: 4px 0 0 4px;
   }
   &__menu {
@@ -56,30 +58,77 @@ body {
     text-decoration: none;
     font-family: Roboto-Regular, sans-serif;
     font-size: 14px;
-    color: #ffffff;
+    color: $text-light;
     transition: color 0.5s;
     &:hover {
-      color: #222222;
+      color: $text-dark;
       transition: color 0.3s;
     }
   }
   &__action-btn {
-    font-family: Roboto-Medium, sans-serif;
-    font-size: 14px;
-    line-height: 14px;
-    color: #222222;
-    border-radius: 22px;
-    outline: none;
+    @include btn-standard;
     padding: 10px 30px;
-    background-color: #ffffff;
-    cursor: pointer;
     border: 5px solid transparent;
-    background-clip: padding-box;
     transition: border, box-shadow 0.2s;
       &:hover {
         box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
         border: solid 5px rgba(0, 0, 0, 0.1);
-        border-radius: 22px;
       }
   }
 }
+
+.banner {
+  padding: 106px $width-desktop 216px;;
+  background-image: url("../img/iPhones.png"), $gradient-bg;
+  background-repeat: no-repeat;
+  background-position: 100% 62%;
+  &__heading {
+    font-family: Dosis-SemiBold, sans-serif;
+    font-size: 54px;
+    margin-left: 5px;
+    line-height: 62px;
+    color: $text-light;
+    width: $banner-text-width;
+  }
+  &__content {
+    width: $banner-text-width;
+  }
+  &__text {
+    font-family: Roboto-Light, sans-serif;
+    font-size: 14px;
+    color: $text-light;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+  &__list {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 14px;
+    color: $text-light;
+    margin-top: 10px;
+    margin-left: 26px;
+    margin-bottom: 24px;
+  }
+  &__list-item {
+    position: relative;
+    line-height: 34px;
+    list-style-type: none;
+    padding-left: 13px;
+    &::before {
+      position: absolute;
+      left: -20px;
+      font-family: "FontAwesome";
+      content: "\f058";
+      margin-right: 10px;
+    }
+  }
+  &__btn {
+    @include btn-standard;
+    padding: 12px 40px;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+    border: solid 5px rgba(0, 0, 0, 0.1);
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.2);;
+    }
+  }
+}
+
