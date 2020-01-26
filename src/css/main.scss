@@ -116,6 +116,7 @@ body {
     &::before {
       position: absolute;
       left: -20px;
+      font-size: 16px;
       font-family: "FontAwesome";
       content: "\f058";
       margin-right: 10px;
@@ -181,6 +182,52 @@ body {
     font-size: 14px;
     color: $text-prg;
     line-height: 25px;
+  }
+}
+
+.stranded {
+  padding: 172px $width-desktop 0;
+  background: url("../img/iPhone.png") no-repeat 0 -13px;
+  height: 709px;
+  &__heading {
+    font-family: Dosis-Medium, sans-serif;
+    font-size: 36px;
+    color: $text-dark;
+    margin-left: 51%;
+  }
+  &__content {
+    margin-left: 51%;
+    margin-top: 20px;
+  }
+  &__text {
+    font-family: Roboto-Light, sans-serif;
+    font-size: 14px;
+    color: $text-prg;
+    line-height: 24px;
+    &_top {
+      margin-bottom: 67px;
+    }
+  }
+  &__list {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 14px;
+    color: $text-prg;
+    margin-top: 22px;
+  }
+  &__list-item {
+    position: relative;
+    line-height: 34px;
+    list-style-type: none;
+    padding-left: 36px;
+    &::before {
+      position: absolute;
+      left: 4px;
+      font-family: "FontAwesome";
+      content: "\f058";
+      margin-right: 10px;
+      font-size: 16px;
+      color: $text-dark;
+    }
   }
 }
 
