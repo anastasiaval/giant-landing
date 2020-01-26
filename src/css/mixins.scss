@@ -12,3 +12,14 @@
   background-clip: padding-box;
 }
 
+@mixin section-h3 {
+  font-family: Dosis-Medium, sans-serif;
+  font-size: 36px;
+  color: $text-dark;
+}
+
+@mixin section-p {
+  font-family: Roboto-Light, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
