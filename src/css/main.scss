@@ -78,7 +78,7 @@ body {
 }
 
 .banner {
-  padding: 106px $width-desktop 216px;;
+  padding: 106px $width-desktop 216px;
   background-image: url("../img/iPhones.png"), $gradient-bg;
   background-repeat: no-repeat;
   background-position: 100% 62%;
@@ -129,6 +129,58 @@ body {
     &:hover {
       border-color: rgba(0, 0, 0, 0.2);;
     }
+  }
+}
+
+.features {
+  margin: 115px $width-desktop 0;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 65px;
+  border-bottom: 1px solid $light-border;
+  &__item {
+    display: flex;
+    margin-bottom: 42px;
+    margin-right: 20px;
+    align-items: center;
+    margin-left: 30px;
+  }
+  &__icon {
+    color: $icon-color;
+    font-size: 25px !important;
+    position: relative;
+    margin-right: 50px;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 73px;
+      height: 73px;
+      bottom: -24px;
+      right: -24px;
+      border: 1px solid $light-border;
+      border-radius: 50%;
+    }
+    &.fa-cog {
+      padding: 0 2px;
+    }
+    &.fa-file-text {
+      padding: 0 2px;
+    }
+    &.fa-fire-extinguisher {
+      padding: 0 2px;
+    }
+  }
+  &__heading {
+    font-family: Dosis-Medium, sans-serif;
+    font-size: 24px;
+    color: $text-dark;
+    margin-bottom: 16px;
+  }
+  &__text {
+    font-family: Roboto-Light, sans-serif;
+    font-size: 14px;
+    color: $text-prg;
+    line-height: 25px;
   }
 }
 
