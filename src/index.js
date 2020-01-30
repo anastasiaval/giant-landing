@@ -19,7 +19,8 @@ $('.header__nav').on('click','a', function (event) {
 const carousel = $('.screenshots__slider').waterwheelCarousel({
     sizeMultiplier: 1,
     opacityMultiplier: 1,
-    separation: 226
+    separation: 226,
+    keyboardNav: true
 });
 
 $('.screenshots__arrow_left').on('click', () => carousel.prev());

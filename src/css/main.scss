@@ -264,7 +264,7 @@ body {
     &:hover {
       color: $text-light;
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
-      border: solid 3px rgba(0, 0, 0, 0.1);
+      border: 3px solid rgba(0, 0, 0, 0.1);
       background-image: $gradient-bg;
       background-clip: padding-box;
       padding: 10px 0;
@@ -274,6 +274,141 @@ body {
     }
     &_right {
       right: -84px;
+    }
+  }
+}
+
+.package {
+  padding: 43px $width-desktop 120px;
+  text-align: center;
+  &__heading {
+    @include section-h3;
+  }
+  &__text {
+    @include section-p;
+    color: $text-prg;
+    margin-top: 18px;
+    padding: 0 21%;
+  }
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 73px;
+  }
+  &__item {
+    width: 262px;
+    background: $section-bg;
+    &:hover {
+      box-shadow: $btn-shadow;
+      background: $btn-bg;
+      .package__price {
+        background: $gradient-bg;
+        color: $text-light;
+      }
+      .package__btn_buy {
+        background: $gradient-bg;
+        border: solid 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px 40px;
+        background-clip: padding-box;
+        color: $text-light;
+      }
+      .package__btn_free {
+        color: $text-prg;
+      }
+      .package__price:before {
+        border-color: transparent transparent transparent $btn-bg;
+      }
+      .package__price:after {
+        border-color: transparent transparent $btn-bg transparent;
+      }
+    }
+  }
+  &__heading-h5 {
+    font-family: Dosis-Regular, sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $text-dark-gray20;
+    padding: 13px;
+  }
+  &__price {
+    font-family: Dosis-Medium, sans-serif;
+    color: $text-dark-gray20;
+    background: $btn-bg;
+    position: relative;
+    padding-top: 19px;
+    padding-bottom: 41px;
+    margin-bottom: 29px;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 80px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 40px 0 0 131px;
+      border-color: transparent transparent transparent $section-bg;
+    }
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 80px;
+      content: '';
+      border-style: solid;
+      border-width: 0 0 40px 131px;
+      border-color: transparent transparent $section-bg transparent;
+    }
+    &_cur {
+      font-size: 18px;
+      vertical-align: 20px;
+    }
+    &_num {
+      font-size: 48px;
+    }
+    &_term {
+      font-size: 18px;
+    }
+  }
+  &__desc {
+    font-family: Roboto-Light, sans-serif;
+    font-size: 14px;
+    color: $text-prg;
+    margin-bottom: 42px;
+  }
+  &__desc-item {
+    list-style-type: none;
+    border-bottom: 1px dashed $light-border;
+    padding: 8px 0;
+    margin: 0 30px;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__btn {
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    cursor: pointer;
+    &_free {
+      font-family: Roboto-Light, sans-serif;
+      color: #aaaaaa;
+      border: none;
+      background: none;
+      margin-bottom: 10px;
+    }
+    &_buy {
+      font-family: Roboto-Medium, sans-serif;
+      color: $text-dark-gray20;
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 14px;
+      border-radius: 20px;
+      background: $btn-bg;
+      padding: 12px 40px;
+      border: solid 1px $light-border;
+      transition: box-shadow 0.3s;
     }
   }
 }

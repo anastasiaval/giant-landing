@@ -20,6 +20,13 @@
 }
 
 @font-face {
+  font-family: 'Dosis-Regular';
+  src: url('../fonts/Dosis-Regular.svg') format('svg'),
+  url('../fonts/Dosis-Regular.ttf') format('ttf'),
+  url('../fonts/Dosis-Regular.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Roboto-Light';
   src: url('../fonts/Roboto-Light.svg') format('svg'),
   url('../fonts/Roboto-Light.ttf') format('ttf'),
